@@ -6,7 +6,7 @@
 /*   By: ggevorgi <sp1tak.gg@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 21:19:39 by ggevorgi          #+#    #+#             */
-/*   Updated: 2025/01/15 14:59:56 by ggevorgi         ###   ########.fr       */
+/*   Updated: 2025/01/15 20:03:17 by ggevorgi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ int	ft_printnbr_hex(unsigned int num, char x, char *flags)
 	char	*hex;
 
 	count = 0;
-	*hex = U_HEX;
+	hex = "0123456789ABCDEF";
 	if (x == 'x')
-		hex = L_HEX;
+		hex = "0123456789abcdef";
 	if (ft_strchr(flags, '#') && num != 0)
 	{
 		count += ft_printch('0');

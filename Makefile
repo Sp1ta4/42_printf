@@ -12,7 +12,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar -rcs $@ $^
 
-bonus: all $(OBJS_B)
+bonus: $(OBJS_B)
 	ar -rcs $(NAME) $^
 
 %.o: %.c Makefile

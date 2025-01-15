@@ -6,7 +6,7 @@
 /*   By: ggevorgi <sp1tak.gg@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 22:56:07 by ggevorgi          #+#    #+#             */
-/*   Updated: 2024/11/23 15:47:40 by ggevorgi         ###   ########.fr       */
+/*   Updated: 2025/01/15 17:27:12 by ggevorgi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,6 @@
 
 # define SPECIFIERS 	"cspdiuxX%"
 # define FLAGS			"# +"
-# define DECIMAL		"0123456789"
-# define OCTAL			"01234567"
-# define L_HEX 			"0123456789abcdef"
-# define U_HEX 			"0123456789ABCDEF"
 
 int		ft_printch(char ch);
 int		ft_prints(char *s);
