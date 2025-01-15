@@ -1,18 +1,18 @@
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -I./includes
+CFLAGS = -Wall -Wextra -Werror -I./includes # spell-checker: disable-line
 
 SRCS = $(shell find ./sources -maxdepth 1 -name "*.c")
 OBJS = $(SRCS:.c=.o)
 SRCS_B = $(shell find ./sources_bonus -maxdepth 1 -name "*_bonus.c")
 OBJS_B = $(SRCS_B:.c=.o)
-NAME = libftprintf.a
+NAME = libftprintf.a # spell-checker: disable-line
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar -rcs $@ $^
 
-bonus: $(OBJS_B)
+bonus: all $(OBJS_B)
 	ar -rcs $(NAME) $^
 
 %.o: %.c Makefile
@@ -21,9 +21,9 @@ bonus: $(OBJS_B)
 clean:
 	rm -f $(OBJS) $(OBJS_B)
 
-fclean: clean
+fclean: clean # spell-checker: disable-line
 	rm -f $(NAME)
 
-re: fclean all
+re: fclean all # spell-checker: disable-line
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re bonus # spell-checker: disable-line

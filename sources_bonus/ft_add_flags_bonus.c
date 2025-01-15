@@ -6,26 +6,25 @@
 /*   By: ggevorgi <sp1tak.gg@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 16:29:14 by ggevorgi          #+#    #+#             */
-/*   Updated: 2024/11/23 16:30:31 by ggevorgi         ###   ########.fr       */
+/*   Updated: 2025/01/15 14:57:43 by ggevorgi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf_bonus.h"
 
-void ft_add_flags(const char *s, char *flags)
+void	ft_add_flags(const char *s, char *flags)
 {
-    while (*s && !ft_strchr(SPECIFIERS, *s))  // Пока не встретим спецификатор
-    {
-        if (ft_strchr(FLAGS, *s))  // Если символ является флагом
-        {
-            // Добавляем флаг в строку, если он еще не был добавлен
-            if (!ft_strchr(flags, *s))
-            {
-                *flags = *s;
-                ++flags;
-            }
-        }
-        ++s;
-    }
-    *flags = '\0';  // Завершаем строку
+	while (*s && !ft_strchr(SPECIFIERS, *s))
+	{
+		if (ft_strchr(FLAGS, *s))
+		{
+			if (!ft_strchr(flags, *s))
+			{
+				*flags = *s;
+				++flags;
+			}
+		}
+		++s;
+	}
+	*flags = '\0';
 }

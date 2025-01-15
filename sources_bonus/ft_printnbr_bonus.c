@@ -6,7 +6,7 @@
 /*   By: ggevorgi <sp1tak.gg@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 21:19:02 by ggevorgi          #+#    #+#             */
-/*   Updated: 2024/11/23 16:20:31 by ggevorgi         ###   ########.fr       */
+/*   Updated: 2025/01/15 14:58:33 by ggevorgi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,42 +14,34 @@
 
 static int	ft_printnbr_recursive(int num)
 {
-	int count = 0;
+	int	count;
 
-	// Если число больше 9, продолжаем рекурсию
+	count = 0;
 	if (num > 9)
 		count += ft_printnbr_recursive(num / 10);
-
-	// Печатаем текущую цифру
 	count += ft_printch(num % 10 + '0');
-	return count;
+	return (count);
 }
 
-int ft_printnbr(int num, char *flags)
+int	ft_printnbr(int num, char *flags)
 {
-	int count = 0;
+	int	count;
 
-	// Обработка отрицательного числа
+	count = 0;
 	if (num < 0)
 	{
-		// Если число -2147483648, выводим напрямую (это специальный случай)
 		if (num == -2147483648)
-			return ft_prints("-2147483648");
-
-		// Печатаем минус и делаем число положительным
+			return (ft_prints("-2147483648"));
 		count += ft_printch('-');
 		num = -num;
 	}
 	else
 	{
-		// Обработка флага "+" или " "
 		if (ft_strchr(flags, '+'))
 			count += ft_printch('+');
 		else if (ft_strchr(flags, ' '))
 			count += ft_printch(' ');
 	}
-
-	// Печать числа с помощью рекурсии
 	count += ft_printnbr_recursive(num);
-	return count;
+	return (count);
 }
