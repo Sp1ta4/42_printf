@@ -22,7 +22,7 @@ clean:
 	rm -f $(OBJS) $(OBJS_B)
 
 fclean: clean # spell-checker: disable-line
-	rm -f $(NAME)
+	rm -f $(NAME) a.out
 
 re: fclean all # spell-checker: disable-line
 
