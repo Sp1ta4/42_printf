@@ -6,14 +6,20 @@
 /*   By: ggevorgi <sp1tak.gg@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 16:29:14 by ggevorgi          #+#    #+#             */
-/*   Updated: 2025/01/15 18:21:25 by ggevorgi         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:34:57 by ggevorgi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf_bonus.h"
+#include <stdio.h>
 
 void	ft_add_flags(const char *s, char *flags)
 {
+	int i;
+	
+	i = 0;
+	while (i < 4)
+		flags[i++] = '\0';
 	while (*s && !ft_strchr(SPECIFIERS, *s))
 	{
 		if (ft_strchr(FLAGS, *s))

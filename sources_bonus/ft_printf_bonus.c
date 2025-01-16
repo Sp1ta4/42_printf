@@ -6,7 +6,7 @@
 /*   By: ggevorgi <sp1tak.gg@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 17:38:38 by ggevorgi          #+#    #+#             */
-/*   Updated: 2025/01/15 19:58:57 by ggevorgi         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:25:24 by ggevorgi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,10 @@ int	ft_printf(const char *s, ...)
 	{	
 		if (s[i] == '%')
 		{
-			// printf(s1);
 			ft_add_flags(&s[i + 1], flags);
 			while (s[i + 1] && ft_strchr(FLAGS, s[i + 1]))
 				i++;
+			// printf("1111 %c\n", s[i + 1]);
 			result += ft_check_specifier(s[i + 1], arguments, flags);
 			i += 2;
 		}
