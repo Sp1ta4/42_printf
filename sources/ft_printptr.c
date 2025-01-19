@@ -6,7 +6,7 @@
 /*   By: ggevorgi <sp1tak.gg@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 21:15:34 by ggevorgi          #+#    #+#             */
-/*   Updated: 2024/11/18 21:27:19 by ggevorgi         ###   ########.fr       */
+/*   Updated: 2025/01/19 17:40:17 by ggevorgi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_printptr(void *prt)
 
 	result = 0;
 	if (prt == 0)
-		result += ft_prints("(nil)");
+		result += ft_prints("0x0");
 	else
 	{
 		result += ft_prints("0x");

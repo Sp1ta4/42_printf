@@ -6,7 +6,7 @@
 /*   By: ggevorgi <sp1tak.gg@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 21:16:30 by ggevorgi          #+#    #+#             */
-/*   Updated: 2025/01/16 16:24:10 by ggevorgi         ###   ########.fr       */
+/*   Updated: 2025/01/19 17:49:20 by ggevorgi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_check_specifier(char c, va_list arguments, char *flags)
 {
-	int	result;
-	char *tmp;
+	int		result;
+	char	*tmp;
 
 	tmp = flags;
 	result = 0;
@@ -33,5 +33,5 @@ int	ft_check_specifier(char c, va_list arguments, char *flags)
 		result += ft_printnbr_hex(va_arg(arguments, unsigned int), c, tmp);
 	else if (c == 'p')
 		result += ft_printptr(va_arg(arguments, void *));
-	return result;
+	return (result);
 }

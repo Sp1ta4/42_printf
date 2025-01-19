@@ -6,7 +6,7 @@
 /*   By: ggevorgi <sp1tak.gg@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 16:29:14 by ggevorgi          #+#    #+#             */
-/*   Updated: 2025/01/16 16:34:57 by ggevorgi         ###   ########.fr       */
+/*   Updated: 2025/01/19 17:48:59 by ggevorgi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 void	ft_add_flags(const char *s, char *flags)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
 	while (i < 4)
 		flags[i++] = '\0';
